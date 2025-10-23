@@ -1,0 +1,19 @@
+#loginForm {
+  background-color: white;
+  padding: 60px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 300px;
+  /* align-items doesn't apply to this block-level element; remove to avoid confusion */
+  max-width: 100%;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Make main fill the viewport so centering is vertical as well */
+    min-height: 50%;
+    /* Small padding so the form doesn't touch the edges on small screens */
+}

@@ -1,0 +1,112 @@
+    body {
+      margin: 0;
+      font-family: "Press Start 2P", cursive;
+      background-color: #f3f3f3;
+      background-image: url("../imagenes/Fondo.png");
+      background-repeat: repeat;
+      background-size: cover;
+      background-attachment: fixed; 
+      
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        background-color: #0E2A57;
+        padding: 0 20px; /* horizontal padding only */
+        height: 60px; 
+        position: relative;
+    }
+
+    header h1{
+        color: #FFFFFFFF;
+    }
+
+    header .slogan{
+        color: #F7E031;
+    font-size: 16px;
+    margin: 0;
+    justify-self: center;
+    padding-left: 0;
+    }
+
+
+    .logo {
+        justify-self: start;
+    width: 80px;
+    height: 80px;
+    margin: 0 20px;
+    }
+
+    .carrito {
+  width: 40px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  right: 45px;
+  }
+
+    nav {
+      background-color: #0E2A57;
+      margin-top: 0px;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a{
+      color: white;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover{
+      color: #F7E031;
+    }
+
+    nav a:active{
+      color: #4BB348;
+    }
+
+    footer {
+    background-color: #0E2A57;
+    color: #FFFFFF;
+    padding: 20px;            
+    display: flex;
+    flex-wrap: wrap;          
+    gap: 20px;
+    justify-content: center; 
+    align-items: center;
+    font-weight: bold;
+    text-align: center;      
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+   footer .x{
+    width: 20px;     
+    height: 20px;
+  }
+
+  footer .instagram{
+    width: 30px;     
+    height: 30px;
+  }
+
+  footer .tiktok{
+    width: 30px;     
+    height: 30px;
+  }
+
+  footer .whatsapp{
+    width: 30px;     
+    height: 30px;
+  }
+
+  footer a{
+    color: white;
+    text-decoration: none; 
+  }
