@@ -1,26 +1,27 @@
-function preguntarLogin() {
-  if (localStorage.getItem("logueado") === "true") {
-    window.location.href = "envios.html";
-  }
-  else{
-    window.location.href = "login.html"
-  }
-}
 document.addEventListener("DOMContentLoaded", () => {
   const loginBtn = document.getElementById("loginBtn");
-  const carrito = document.getElementById("carrito");
-  
-  if (localStorage.getItem("logueado") === "true") {
-    carrito.style.display = "inline";
+  const userPresentacion = document.getElementById("userPresentacion");
+  const cerrarSesion = document.getElementById("cerrarSesion");
+  const menuUsuario = document.getElementById("usuarioMenu");
+
+ if (localStorage.getItem("logueado") === "true") {
+    const usuario = localStorage.getItem("usuario");
+    userPresentacion.textContent = usuario.toUpperCase();
+    menuUsuario.style.display = "inline";
     loginBtn.style.display = "none";
   } else {
-    carrito.style.display = "none";
+    userPresentacion.textContent = ""
+    menuUsuario.style.display = "none";
     loginBtn.style.display = "inline";
   }
 
-  loginBtn.addEventListener("click", (e) => {
+  cerrarSesion.addEventListener("click", (e) => {
+    localStorage.removeItem("logueado");
+    localStorage.removeItem("usuario");
+    window.location.href = "index.html"; 
+  });
+
+  loginBtn.addEventListener("click", () => {
     window.location.href = "login.html";
   });
 });
-
-
