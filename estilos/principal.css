@@ -58,6 +58,37 @@
   transform: translateY(15px); 
   right: 45px;
 }
+.userPresentacion {
+  justify-self: end;
+  margin: 0;
+  padding: 0;
+  transform: translateY(-10px);
+  right: 70px;
+  color: #F7E031;
+  font-size: 14px;
+  position: fixed;
+  top: 45px;
+}
+
+.usuarioMenu a {
+  justify-self: end;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: white;
+  top: 60px;
+  position: fixed;
+  transform: translateY(-10px);
+  right: 30px;
+  font-size: 10px;
+}
+
+.usuarioMenu a:hover{
+      color: #F7E031;
+    }
+
+    .usuarioMenu a:active{
+      color: #4BB348;
+    }
 
     nav {
       background-color: #0E2A57;

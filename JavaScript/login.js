@@ -1,5 +1,5 @@
 if (localStorage.getItem("logueado") === "true") {
-  window.location.href = "envios.html";
+  window.location.href = "index.html";
 }
 
 function iniciarSesion() {
@@ -8,8 +8,8 @@ function iniciarSesion() {
 
   if (usuario === "admin" && contrasenia === "admin") {
     localStorage.setItem("logueado", "true");
-    localStorage.setItem("usuario", user);
-    window.location.href = "envios.html"; 
+    localStorage.setItem("usuario", usuario);
+    window.location.href = "index.html"; 
   } else {
     const mensajeError = document.getElementById("mensajeError");
     if (mensajeError) {
