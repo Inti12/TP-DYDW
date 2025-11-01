@@ -2,7 +2,9 @@
 
     main {
       display: flex;
+      flex-direction: column; 
       padding: 20px;
+      align-items: center; 
     }
 
     section {
@@ -28,7 +30,18 @@
      2px  2px 0 #fff;
     }
 
+
+  .card:hover {
+    transform: scale(1.08);
+  box-shadow: 0 0 20px #0E2A57, 0 0 40px #0E2A57;
+  border-color: #F3F3F3;
+    }
+
   .card {
+    border: 2px solid #F3F3F3;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
     background-color: #F3F3F3;
     color: #0E2A57;
     border: 1px solid #ccc;
@@ -54,31 +67,42 @@
   .card p {
     font-size: 0.95em;
     margin-bottom: 12px;
+    font-family: "VT323", monospace;
   }
   
   .precio{
     color: #c0ad00;
-  }
-
-  .card button {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    font-size: 0.9;
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    transition: background-color 0.3s linear;
     position: absolute;
     bottom: 16px;
-    left: 10%;
-    border-radius: 20px; 
+    left: 50%;               
+    transform: translateX(-50%);
   }
 
-  .card button:hover{
-    background-color: #4BB348;
-  }
+
+
+/* ===== QUIÉNES SOMOS ===== */
+.nosotros {
+  background: #fdfcf9; /* mismo fondo claro */
+  color: #001144;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.nosotros h2 {
+  font-size: 1.3rem;
+  color: #0E2A57;
+  margin-bottom: 20px;
+}
+
+.nosotros p {
+  font-family: "VT323", monospace;
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 50px;
+  line-height: 1.5;
+  color: #333;
+}
+
 
  
 

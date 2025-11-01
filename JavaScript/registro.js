@@ -1,3 +1,7 @@
+if (localStorage.getItem("logueado") === "true") {
+  window.location.href = "envios.html";
+}
+
 function validarRegistro(event) {
     event.preventDefault();
 

@@ -1,37 +1,104 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <title>NoTilt Burgers</title>
   <link rel="stylesheet" href="../estilos/principal.css">
+  <link rel="stylesheet" href="../estilos/menu.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <script src="../JavaScript/menu.js"></script>
 </head>
+
 <body>
 
+  
   <header>
-    
+
     <img src="../imagenes/Logo.png" alt="NoTiltLogo" class="logo">
-    <h1 align = "center" class="slogan">“No te tiltees, comete una hamburguesa. Nosotros te la llevamos”<h1>
-    <img src="../imagenes/carrito.png" alt="carrito" class="carrito"><br>
+    <h1 align="center" class="slogan">“No te tiltees, comete una hamburguesa. Nosotros te la llevamos”<h1>
+        <img src="../imagenes/carrito.png" alt="carrito" class="carrito"><br>
   </header>
 
   <nav>
     <a href="index.html">INICIO</a>
-    <a href="menu.html">MENÚ</a>
-    <a href="contacto.html">CONTACTO</a>
+    <a href="menu.html">MENU</a>
+    <a href="envios.html">ENVIOS</a>
   </nav>
-<main>
-    
+
+  <main>
+    <section class="menu">
+      <h2>Nuestro Menú</h2>
+      <div class="menu-items">
+
+        <div class="item">
+          <img src="../imagenes/Bajonera.png" alt="Bajonera">
+          <h3>Hamburguesa Bajonera</h3>
+          <p>$15900</p>
+          <div class="controls">
+            <button class="minus">-</button>
+            <span class="cantidad">0</span>
+            <button class="plus">+</button>
+          </div>
+        </div>
+
+        <div class="item">
+          <img src="../imagenes/Tilt.png" alt="Tilt">
+          <h3>Hamburguesa Tilt</h3>
+          <p>$21900</p>
+          <div class="controls">
+            <button class="minus">-</button>
+            <span class="cantidad">0</span>
+            <button class="plus">+</button>
+          </div>
+        </div>
+
+        <div class="item">
+          <img src="../imagenes/Gamer.png" alt="Gamer">
+          <h3>Hamburguesa Gamer</h3>
+          <p>$3200</p>
+          <div class="controls">
+            <button class="minus">-</button>
+            <span class="cantidad">0</span>
+            <button class="plus">+</button>
+          </div>
+        </div>
+
+        <div class="item">
+          <img src="../imagenes/Retro.png" alt="Retro">
+          <h3>Hamburguesa Retro</h3>
+          <p>$3200</p>
+          <div class="controls">
+            <button class="minus">-</button>
+            <span class="cantidad">0</span>
+            <button class="plus">+</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <aside class="carrito">
+      <h2>🛒 Tu Carrito</h2>
+      <ul id="carrito-lista"></ul>
+      <p class="total">Total: $<span id="total">0</span></p>
+      <button id="vaciar">Vaciar carrito</button>
+    </aside>
   </main>
 
   <footer>
-    <img src="../imagenes/instagram.png" alt="Instagram" class="instagram"><p>@NoTiltArg</p>
-    <img src="../imagenes/x.png" alt="X" class="x"><p>@NoTiltArg1</p>
-    <img src="../imagenes/tiktok.png" alt="TikTok" class="tiktok"><p>@NoTiltArg</p>
-    <img src="../imagenes/whatsapp.png" alt="Whatsapp" class="whatsapp"><p>11-1234-5678</p>
+    <img src="../imagenes/instagram.png" alt="Instagram" class="instagram">
+    <p>@NoTiltArg</p>
+    <img src="../imagenes/x.png" alt="X" class="x">
+    <p>@NoTiltArg1</p>
+    <img src="../imagenes/tiktok.png" alt="TikTok" class="tiktok">
+    <p>@NoTiltArg</p>
+    <img src="../imagenes/whatsapp.png" alt="Whatsapp" class="whatsapp">
+    <p>11-1234-5678</p>
   </footer>
 
 </body>
+
 </html>

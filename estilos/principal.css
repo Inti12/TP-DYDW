@@ -10,13 +10,12 @@
     }
 
     header {
-        display: grid;
-        grid-template-columns: 1fr auto 1fr;
-        align-items: center;
-        background-color: #0E2A57;
-        padding: 0 20px; /* horizontal padding only */
-        height: 60px; 
-        position: relative;
+        display: flex;
+      align-items: center;          
+      justify-content: space-between; 
+      background-color: #0E2A57;
+      padding: 0 20px;
+      height: 60px;
     }
 
     header h1{
@@ -37,16 +36,28 @@
     width: 80px;
     height: 80px;
     margin: 0 20px;
+    transform: translateY(15px);
     }
 
-    .carrito {
+.carrito {
   width: 40px;
   height: auto;
   margin: 0;
   padding: 0;
   position: fixed;
   right: 45px;
-  }
+  transform: translateY(15px);
+}
+
+.iniciarSesion {
+  width: 80px;
+  height: 80px;
+  justify-self: end;
+  margin: 0;
+  padding: 0;
+  transform: translateY(15px); 
+  right: 45px;
+}
 
     nav {
       background-color: #0E2A57;

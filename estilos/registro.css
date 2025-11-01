@@ -1,4 +1,4 @@
-#loginForm {
+#registroForm {
   background-color: white;
   padding: 60px 40px;
   border-radius: 10px;
@@ -6,7 +6,7 @@
   text-align: center;
   width: 300px;
   max-width: 100%;
-  margin-top: 130px;
+  margin-top: 50px;
 }
 
 form {
@@ -22,9 +22,16 @@ main {
     align-items: center;
 }
 
-.registrate{
-  margin-top: 50px;
-  font-size: 9px;
+.login {
+  margin-top: 20px;
+  font-size: 14px; /* más legible */
+  text-align: center; /* opcional, para centrar */
+}
+
+.login a {
+  color: #6a0dad; /* morado, opcional */
+  text-decoration: underline; /* subrayado */
+  font-weight: bold; /* un poco más visible */
 }
 
 button {

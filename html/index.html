@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <title>NoTilt Burgers</title>
@@ -8,16 +9,21 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <script src="../JavaScript/script.js"></script>
+  <script src="../JavaScript/inicio.js"></script>
 </head>
 
 <body>
-  
+
   <header>
-    
     <img src="../imagenes/Logo.png" alt="NoTiltLogo" class="logo">
-    <h1 align = "center" class="slogan">“No te tiltees, comete una hamburguesa. Nosotros te la llevamos”<h1>
-    <img src="../imagenes/carrito.png" alt="carrito" class="carrito"><br>
+    <h1 align="center" class="slogan">“No te tiltees, comete una hamburguesa. Nosotros te la llevamos”<h1>
+    <img src="../imagenes/carrito.png" alt="carrito" class="carrito" id="carrito">
+    <a href="login.html">
+    <img id="loginBtn" class="iniciarSesion" src="../imagenes/IniciarSesionLogo.png" alt="Iniciar sesión" onclick="">
+    </a>
+    
+
+    <br>
   </header>
 
   <nav>
@@ -28,46 +34,75 @@
 
   <main>
     <section>
-      <h2>DESTACADOS</h2>
+      <h2>👾 DESTACADOS 👾</h2>
       <div class="destacados">
         <article class="card">
-          <img src="../imagenes/BIGM.png" alt="Hamburguesa1">
+          <img src="../imagenes/Bajonera.png" alt="Hamburguesa1">
           <h3>Hamburguesa Bajonera</h3>
           <p>Doble carne (100 gr c/u), cuádruple cheddar en pan de papa neutro, acompañada con papas fritas.</p>
-          <p class="precio">Precio: $15.900</p>
-          <button>Añadir al carrito</button>
+          <p class="precio">$15.900</p>
         </article>
         <article class="card">
-          <img src="../imagenes/BIGM.png" alt="Hamburguesa1">
+          <img src="../imagenes/Tilt.png" alt="Hamburguesa1">
           <h3>Hamburguesa Tilt</h3>
-          <p>Triple carne (100 gr c/u), triple cheddar, cebolla caramelizada, panceta, doble huevo y salsa especial en pan de papa, acompañada con papas fritas.</p>
-          <p class="precio">Precio: $21.900</p>
-          <button>Añadir al carrito</button>
+          <p>Triple carne (100 gr c/u), triple cheddar, cebolla caramelizada, panceta, doble huevo y salsa especial en
+            pan de papa, acompañada con papas fritas.</p>
+          <p class="precio">$21.900</p>
         </article>
         <article class="card">
-          <img src="../imagenes/BIGM.png" alt="Hamburguesa1">
+          <img src="../imagenes/Gamer.png" alt="Hamburguesa1">
           <h3>Hamburguesa Gamer</h3>
-          <p>Doble carne (100 gr c/u), Queso cheddar, cebolla crispy, manteca de hierbas y salsa especial en pan de papa, acompañada con papas fritas.</p>
-          <p class="precio">Precio: $19.900</p>
-          <button>Añadir al carrito</button>
+          <p>Doble carne (100 gr c/u), Queso cheddar, cebolla crispy, cocinada con manteca y salsa especial en pan de
+            papa, acompañada con papas fritas.</p>
+          <p class="precio">$19.900</p>
         </article>
         <article class="card">
-          <img src="../imagenes/BIGM.png" alt="Hamburguesa1">
+          <img src="../imagenes/Retro.png" alt="Hamburguesa1">
           <h3>Hamburguesa Retro</h3>
-          <p>100 gr de Carne, cheddar, panceta ahumada y cebolla crispy, en pan de papa, acompañado con papas fritas.</p>
-          <p class="precio">Precio: $17.900</p>
-          <button>Añadir al carrito</button>
+          <p>100 gr de Carne, cheddar, panceta ahumada y cebolla crispy, en pan de papa, acompañado con papas fritas.
+          </p>
+          <p class="precio">$17.900</p>
         </article>
       </div>
     </section>
+
+    <section class="nosotros">
+      <h2 class="titulo-nosotros">👾 QUIÉNES SOMOS 👾 </h2>
+      <p class="intro-nosotros">
+        NoTilt somos todos los que alguna vez perdimos una ranked por lag,
+        los que jugamos en servidores imposibles, con delay y hambre,
+        pero igual seguimos dándolo todo hasta el final.
+        Los que flameamos un poquito, pero después nos reímos en el chat del grupo.
+      </p>
+
+      <p>
+        Nacimos en Argentina, donde el hambre y el tilt son parte de la rutina gamer.
+        Después de tantas partidas frustradas, entendimos que con hambre y enojo
+        no hay motivación para seguir jugando.
+        Por eso decidimos crear <strong>NoTilt Burgers</strong>:
+        para que después de una buena hamburguesa, vuelvas con energía,
+        buen humor y listo para ganar la próxima.
+      </p>
+
+      <p>
+        Acá <strong>el que se tiltea, pierde</strong>.
+        Pero con nosotros igual ganás…
+        porque te la llevamos directo a tu casa, sin lag y con extra cheddar.
+      </p>
+
   </main>
 
   <footer>
-    <img src="../imagenes/instagram.png" alt="Instagram" class="instagram"><p><a href='https://www.instagram.com/notiltburger/'>@NoTiltArg</a></p>
-    <img src="../imagenes/x.png" alt="X" class="x"><p>@NoTiltArg1</p>
-    <img src="../imagenes/tiktok.png" alt="TikTok" class="tiktok"><p>@NoTiltArg</p>
-    <img src="../imagenes/whatsapp.png" alt="Whatsapp" class="whatsapp"><p>11-1234-5678</p>
+    <img src="../imagenes/instagram.png" alt="Instagram" class="instagram">
+    <p><a href='https://www.instagram.com/notiltburger/'>@NoTiltArg</a></p>
+    <img src="../imagenes/x.png" alt="X" class="x">
+    <p>@NoTiltArg1</p>
+    <img src="../imagenes/tiktok.png" alt="TikTok" class="tiktok">
+    <p>@NoTiltArg</p>
+    <img src="../imagenes/whatsapp.png" alt="Whatsapp" class="whatsapp">
+    <p>11-1234-5678</p>
   </footer>
 
 </body>
+
 </html>
