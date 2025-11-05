@@ -17,17 +17,15 @@
   <header>
     <img src="../imagenes/Logo.png" alt="NoTiltLogo" class="logo">
     <h1 align="center" class="slogan">“No te tiltees, comete una hamburguesa. Nosotros te la llevamos”<h1>
-    <!--<img src="../imagenes/carrito.png" alt="carrito" class="carrito" id="carrito">-->
-    <div class="usuarioMenu" id="usuarioMenu">
-      <h3 id="userPresentacion" class="userPresentacion"></h3>
-      <a href="index.html" id="cerrarSesion">Cerrar sesion</a>
-    </div>
-    <a href="login.html" id="loginBtn">
-      <img class="iniciarSesion" src="../imagenes/IniciarSesionLogo.png" alt="Iniciar sesión">
-    </a>
-    
-    
-    <br>
+        <!--<img src="../imagenes/carrito.png" alt="carrito" class="carrito" id="carrito">-->
+        <div class="usuarioMenu" id="usuarioMenu">
+          <h3 id="userPresentacion" class="userPresentacion"></h3>
+          <a href="index.html" id="cerrarSesion">Cerrar sesion</a>
+        </div>
+        <a href="login.html" id="loginBtn">
+          <img class="iniciarSesion" src="../imagenes/IniciarSesionLogo.png" alt="Iniciar sesión">
+        </a>
+        <br>
   </header>
 
   <nav>
@@ -45,33 +43,34 @@
           <img src="../imagenes/Bajonera.png" alt="Hamburguesa1">
           <h3>Hamburguesa Bajonera</h3>
           <p>Doble carne (100 gr c/u), cuádruple cheddar en pan de papa neutro, acompañada con papas fritas.</p>
-          <p class="precio"><b>$15.900</b></p>
+          <p class="precio"><b>$10.000</b></p>
         </article>
         <article class="card">
           <img src="../imagenes/Tilt.png" alt="Hamburguesa1">
           <h3>Hamburguesa Tilt</h3>
           <p>Triple carne (100 gr c/u), triple cheddar, cebolla caramelizada, panceta, doble huevo y salsa especial en
             pan de papa, acompañada con papas fritas.</p>
-          <p class="precio"><b>$21.900</b></p>
+          <p class="precio"><b>$13.900</b></p>
         </article>
         <article class="card">
           <img src="../imagenes/Gamer.png" alt="Hamburguesa1">
           <h3>Hamburguesa Gamer</h3>
           <p>Doble carne (100 gr c/u), Queso cheddar, cebolla crispy, cocinada con manteca y salsa especial en pan de
             papa, acompañada con papas fritas.</p>
-          <p class="precio"><b>$19.900</b></p>
+          <p class="precio"><b>$13.300</b></p>
         </article>
         <article class="card">
           <img src="../imagenes/Retro.png" alt="Hamburguesa1">
           <h3>Hamburguesa Retro</h3>
           <p>100 gr de Carne, cheddar, panceta ahumada y cebolla crispy, en pan de papa, acompañado con papas fritas.
           </p>
-          <p class="precio"><b>$17.900</b></p>
+          <p class="precio"><b>$11.300</b></p>
         </article>
       </div>
     </section>
 
     <section class="nosotros">
+      <a name="finalNosotros"></a>
       <h2 class="titulo-nosotros">👾 QUIÉNES SOMOS 👾 </h2>
       <p class="intro-nosotros">
         NoTilt somos todos los que alguna vez perdimos una ranked por lag,
@@ -94,7 +93,58 @@
         Pero con nosotros igual ganás…
         porque te la llevamos directo a tu casa, sin lag y con extra cheddar.
       </p>
-      <a name="finalNosotros"></a>
+
+
+      <section class="reseñas">
+        <h2>⭐ Opiniones de la comunidad ⭐</h2>
+
+        <div class="reseñas-container">
+          <button class="arrow left" id="prev">&#10094;</button>
+
+          <div class="reseña visible">
+            <div class="globo">
+              <img src="../imagenes/user1.png" alt="Usuario 1" class="foto-usuario">
+              <div class="info">
+                <h4>@PlayerOne</h4>
+                <div class="estrellas">⭐⭐⭐⭐⭐</div>
+                <p>“Me tiltée después de perder tres ranked seguidas, pero pedí una Bajonera y volví con toda. 10/10.”
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="reseña">
+            <div class="globo">
+              <img src="../imagenes/user2.png" alt="Usuario 2" class="foto-usuario">
+              <div class="info">
+                <h4>@SupportMain</h4>
+                <div class="estrellas">⭐⭐⭐⭐</div>
+                <p>“Pedí la Retro mientras estaba en cola. Llegó antes que la partida. Servicio épico.”</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="reseña">
+            <div class="globo">
+              <img src="../imagenes/user3.png" alt="Usuario 3" class="foto-usuario">
+              <div class="info">
+                <h4>@NoScopeGuy</h4>
+                <div class="estrellas">⭐⭐⭐⭐⭐</div>
+                <p>“Después de una derrota dura, me comí una Tilt y todo mejoró. +rep.”</p>
+              </div>
+            </div>
+          </div>
+
+          <button class="arrow right" id="next">&#10095;</button>
+        </div>
+      </section>
+
+      <section class="reseña-section">
+        <h2>¿Qué te pareció NoTilt?</h2>
+        <p>Tu opinión nos ayuda a seguir mejorando nuestras hamburguesas y tu experiencia gamer 🍔🎮</p>
+        <button onclick="window.location.href='reseña.html'" class="btn-reseña">Dejar reseña</button>
+      </section>
+
   </main>
 
   <footer>

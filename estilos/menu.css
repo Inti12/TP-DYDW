@@ -3,16 +3,24 @@ main {
   justify-content: space-around;
   flex-wrap: wrap;
   text-align: center;
-  padding: 40px 20px;
+  padding: 40px 20px 150px;
 }
 
 .menu {
   flex: 2;
+  min-width: 600px;
 }
 
 .menu h2 {
   color: #0E2A57;
+  text-shadow:
+    -2px -2px 0 #fff,
+    2px -2px 0 #fff,
+    -2px 2px 0 #fff,
+    2px 2px 0 #fff;
   margin-bottom: 30px;
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
 }
 
 .menu-items {
@@ -22,6 +30,24 @@ main {
   flex-wrap: wrap;
 }
 
+.menu-items>h3 {
+  width: 100%;
+  font-size: 22px;
+  color: #0E2A57;
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  text-shadow:
+    -2px -2px 0 #fff,
+    2px -2px 0 #fff,
+    -2px 2px 0 #fff,
+    2px 2px 0 #fff;
+  border-top: 4px solid #0E2A57;
+  padding-top: 20px;
+}
+
+/* --- TARJETAS --- */
 .item {
   background: #F3F3F3;
   border: 2px solid #ccc;
@@ -43,6 +69,7 @@ main {
   margin-bottom: 10px;
 }
 
+/* --- BOTONES + Y - --- */
 .controls {
   display: flex;
   justify-content: center;
@@ -70,29 +97,38 @@ main {
   font-size: 1rem;
 }
 
+/* --- CARRITO --- */
 .carritoMenu {
   flex: 1;
+  max-width: 280px;
   background: #eaeaea;
   border-radius: 10px;
   padding: 20px;
-  max-width: 200px;
+  position: sticky;
+  top: 20px;
+  align-self: flex-start;
+
+  max-height: 75vh;
+  overflow-y: auto;
 }
 
 .carritoMenu h2 {
   color: #0E2A57;
   margin-bottom: 20px;
   font-size: 16px;
+  text-align: center;
 }
 
 #carrito-lista {
   list-style: none;
   padding: 0;
   margin: 0;
+
 }
 
 #carrito-lista li {
   margin: 8px 0;
-  font-size: 0.9rem;
+  font-size: 12px;
 }
 
 #vaciar {
@@ -103,13 +139,54 @@ main {
   border-radius: 20px;
   cursor: pointer;
   transition: background 0.2s;
+  flex: 1;
+  text-align: center;
+  width: 120px;
+  height: 50px;
 }
 
 #vaciar:hover {
   background: #c0ad00;
 }
 
+#pagar {
+  background: #0E2A57;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.2s;
+  flex: 1;
+  text-align: center;
+  width: 120px;
+  height: 50px;
+}
+
+#pagar:hover {
+  background: #c0ad00;
+}
+
 .totalButton {
   display: flex;
-  bottom: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .carritoMenu {
+    position: relative;
+    top: auto;
+    max-width: 100%;
+    width: 90%;
+    margin-top: 30px;
+  }
 }
