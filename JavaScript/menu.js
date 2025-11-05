@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('.cantidad').forEach((el) => el.textContent = 0);
   });
 
-  document.getElementById("pagar").addEventListener("click", preguntarAccion);
+  document.getElementById("pagar").addEventListener("click", preguntarPagar);
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -85,20 +85,35 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-function preguntarAccion() {
+function preguntarPagar() {
   const total = parseInt(document.getElementById("total").textContent);
 
   if (total === 0) {
     alert("El carrito está vacío. Agregá al menos un producto antes de continuar.");
-    return; 
+    return;
   }
 
-  const respuesta = confirm("¿Querés iniciar sesión?\nSi elegís 'Cancelar', te llevará al formulario de envío.");
+  const carritoLista = [];
+  document.querySelectorAll("#carrito-lista li").forEach((item) => {
+    carritoLista.push(item.textContent);
+  });
 
-  if (respuesta) {
-    window.location.href = "login.html";
-  } else {
+  localStorage.setItem("pedido", JSON.stringify(carritoLista));
+  localStorage.setItem("totalPedido", total);
+
+  const usuarioLogueado = localStorage.getItem("usuarioLogueado");
+
+  if (usuarioLogueado) {
     window.location.href = "formularioEnvio.html";
+  } else {
+    const respuesta = confirm("¿Querés iniciar sesión?\nSi elegís 'Cancelar', te llevará a la confirmación del pedido.");
+
+    if (respuesta) {
+      window.location.href = "login.html";
+    } else {
+      window.location.href = "formularioEnvio.html";
+    }
   }
 }
+
 

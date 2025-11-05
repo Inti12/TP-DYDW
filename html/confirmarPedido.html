@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>NoTilt Burgers</title>
+  <link rel="stylesheet" href="../estilos/principal.css">
+  <link rel="stylesheet" href="../estilos/confirmacionPedido.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <script src="../JavaScript/confirmacion.js"></script>
+</head>
+
+<body>
+
+  
+  <header>
+    <img src="../imagenes/Logo.png" alt="NoTiltLogo" class="logo">
+    <h1 align="center" class="slogan">“No te tiltees, comete una hamburguesa. Nosotros te la llevamos”<h1>
+        <div class="usuarioMenu" id="usuarioMenu">
+          <h3 id="userPresentacion" class="userPresentacion"></h3>
+          <a href="index.html" id="cerrarSesion">Cerrar sesion</a>
+        </div>
+  </header>
+
+  <nav>
+    <a href="index.html">INICIO</a>
+    <a href="menu.html">MENU</a>
+  </nav>
+
+  <main id="contenidoConfirmacion">
+    <h2>Tu pedido está listo para confirmar</h2>
+
+    <section id="datosCliente">
+      <h3>Datos del Cliente</h3>
+      <p><strong>Nombre:</strong> <span id="nombreCliente"></span></p>
+      <p><strong>Dirección:</strong> <span id="direccionCliente"></span></p>
+      <p><strong>Teléfono:</strong> <span id="telefonoCliente"></span></p>
+      <p><strong>Método de Pago:</strong> <span id="metodoPagoCliente"></span></p>
+    </section>
+
+    <section id="detallePedido">
+      <h3>Detalle del Pedido</h3>
+      <ul id="listaPedido"></ul>
+      <p><strong>Total:</strong> $<span id="totalPedido"></span></p>
+    </section>
+
+    <div class="botonesConfirmacion">
+      <button id="confirmarPedido">Confirmar pedido</button>
+      <button id="volverInicio">Volver al inicio</button>
+    </div>
+  </main>
+
+  <footer>
+    <img src="../imagenes/instagram.png" alt="Instagram" class="instagram">
+    <p><a href='https://www.instagram.com/notiltburger/'>@NoTiltArg</a></p>
+    <img src="../imagenes/x.png" alt="X" class="x">
+    <p><a href='https://x.com/notiltburger1'>@NoTiltArg1</a></p>
+    <img src="../imagenes/tiktok.png" alt="TikTok" class="tiktok">
+    <p><a href='https://www.tiktok.com/@notiltburger'>@NoTiltArg1</a></p>
+    <img src="../imagenes/whatsapp.png" alt="Whatsapp" class="whatsapp">
+    <p><a href="https://wa.me/541112345678">11-1234-5678</a></p>
+  </footer>
+
+</body>
+
+</html>

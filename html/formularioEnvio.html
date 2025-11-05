@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <script src="../JavaScript/menu.js"></script>
+    <script src="../JavaScript/formularioEnvio.js"></script>
 </head>
 
 <body>
@@ -21,10 +21,6 @@
                     <h3 id="userPresentacion" class="userPresentacion"></h3>
                     <a href="index.html" id="cerrarSesion">Cerrar sesion</a>
                 </div>
-                <a href="login.html" id="loginBtn">
-                    <img class="iniciarSesion" src="../imagenes/IniciarSesionLogo.png" alt="Iniciar sesión">
-                </a>
-                <br>
     </header>
 
     <nav>
@@ -52,13 +48,13 @@
             <select id="metodoPago" name="metodoPago" required>
                 <option value="">Seleccione un método</option>
                 <option value="tarjeta">Tarjeta de Crédito / Débito</option>
-                <option value="efectivo">Efectivo al recibir</option>
+                <option value="efectivo">Efectivo</option>
                 <option value="transferencia">Transferencia Bancaria</option>
                 <option value="mercadopago">Mercado Pago</option>
             </select>
             <p></p>
 
-            <button type="submit">Confirmar Pedido</button>
+            <button id="AceptarBtn" type="submit">Aceptar</button>
         </form>
 
     </main>
