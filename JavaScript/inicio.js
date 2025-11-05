@@ -22,6 +22,26 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   loginBtn.addEventListener("click", () => {
+    localStorage.setItem("ultimaPagina", window.location.href);
     window.location.href = "login.html";
   });
+
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const reseñas = document.querySelectorAll(".reseña");
+  const prev = document.getElementById("prev");
+  const next = document.getElementById("next");
+  let index = 0;
+
+  function mostrarReseña(nueva) {
+    reseñas[index].classList.remove("visible");
+    index = (nueva + reseñas.length) % reseñas.length;
+    reseñas[index].classList.add("visible");
+  }
+
+  prev.addEventListener("click", () => mostrarReseña(index - 1));
+  next.addEventListener("click", () => mostrarReseña(index + 1));
+
+  setInterval(() => mostrarReseña(index + 1), 6000);
 });

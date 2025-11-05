@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NoTilt Burgers</title>
+    <link rel="stylesheet" href="../estilos/principal.css">
+    <link rel="stylesheet" href="../estilos/formularioEnvio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="../JavaScript/menu.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="../imagenes/Logo.png" alt="NoTiltLogo" class="logo">
+        <h1 align="center" class="slogan">“No te tiltees, comete una hamburguesa. Nosotros te la llevamos”<h1>
+                <!--<img src="../imagenes/carrito.png" alt="carrito" class="carrito" id="carrito">-->
+                <div class="usuarioMenu" id="usuarioMenu">
+                    <h3 id="userPresentacion" class="userPresentacion"></h3>
+                    <a href="index.html" id="cerrarSesion">Cerrar sesion</a>
+                </div>
+                <a href="login.html" id="loginBtn">
+                    <img class="iniciarSesion" src="../imagenes/IniciarSesionLogo.png" alt="Iniciar sesión">
+                </a>
+                <br>
+    </header>
+
+    <nav>
+        <a href="index.html">INICIO</a>
+    </nav>
+
+    <main>
+
+        <form id="envioForm">
+            <h2>DATOS DE ENVÍO</h2>
+
+            <label for="nombre">Nombre y Apellido:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <p></p>
+
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required>
+            <p></p>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+            <p></p>
+
+            <label for="metodoPago">Método de Pago:</label>
+            <select id="metodoPago" name="metodoPago" required>
+                <option value="">Seleccione un método</option>
+                <option value="tarjeta">Tarjeta de Crédito / Débito</option>
+                <option value="efectivo">Efectivo al recibir</option>
+                <option value="transferencia">Transferencia Bancaria</option>
+                <option value="mercadopago">Mercado Pago</option>
+            </select>
+            <p></p>
+
+            <button type="submit">Confirmar Pedido</button>
+        </form>
+
+    </main>
+
+    <footer>
+        <img src="../imagenes/instagram.png" alt="Instagram" class="instagram">
+        <p><a href='https://www.instagram.com/notiltburger/'>@NoTiltArg</a></p>
+        <img src="../imagenes/x.png" alt="X" class="x">
+        <p><a href='https://x.com/notiltburger1'>@NoTiltArg1</a></p>
+        <img src="../imagenes/tiktok.png" alt="TikTok" class="tiktok">
+        <p><a href='https://www.tiktok.com/@notiltburger'>@NoTiltArg1</a></p>
+        <img src="../imagenes/whatsapp.png" alt="Whatsapp" class="whatsapp">
+        <p><a href="https://wa.me/541112345678">11-1234-5678</a></p>
+    </footer>
+
+</body>
+
+</html>

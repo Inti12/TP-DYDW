@@ -1,6 +1,12 @@
-if (localStorage.getItem("logueado") === "true") {
-  window.location.href = "index.html";
-}
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("loginForm");
+  if (form) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      iniciarSesion();
+    });
+  }
+});
 
 function iniciarSesion() {
   const usuario = document.getElementById("usuario").value;
@@ -9,7 +15,14 @@ function iniciarSesion() {
   if (usuario === "admin" && contrasenia === "admin") {
     localStorage.setItem("logueado", "true");
     localStorage.setItem("usuario", usuario);
-    window.location.href = "index.html"; 
+    const ultimaPagina = localStorage.getItem("ultimaPagina");
+    alert(ultimaPagina)
+    if (ultimaPagina) {
+      window.location.href = ultimaPagina;
+      localStorage.removeItem("ultimaPagina"); 
+    } else {
+      window.location.href = "index.html"; 
+    }
   } else {
     const mensajeError = document.getElementById("mensajeError");
     if (mensajeError) {
@@ -20,11 +33,3 @@ function iniciarSesion() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("loginForm");
-  if (form) {
-    form.addEventListener("submit", (e) => {
-      iniciarSesion();
-    });
-  }
-});

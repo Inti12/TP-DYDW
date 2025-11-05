@@ -50,4 +50,55 @@ document.addEventListener("DOMContentLoaded", () => {
     carritoLista.innerHTML = '';
     document.querySelectorAll('.cantidad').forEach((el) => el.textContent = 0);
   });
+
+  document.getElementById("pagar").addEventListener("click", preguntarAccion);
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const loginBtn = document.getElementById("loginBtn");
+  const userPresentacion = document.getElementById("userPresentacion");
+  const cerrarSesion = document.getElementById("cerrarSesion");
+  const menuUsuario = document.getElementById("usuarioMenu");
+
+ if (localStorage.getItem("logueado") === "true") {
+    const usuario = localStorage.getItem("usuario");
+    userPresentacion.textContent = usuario.toUpperCase();
+    menuUsuario.style.display = "inline";
+    loginBtn.style.display = "none";
+  } else {
+    userPresentacion.textContent = ""
+    menuUsuario.style.display = "none";
+    loginBtn.style.display = "inline";
+  }
+
+  cerrarSesion.addEventListener("click", (e) => {
+    localStorage.removeItem("logueado");
+    localStorage.removeItem("usuario");
+    window.location.href = "index.html"; 
+  });
+
+  loginBtn.addEventListener("click", () => {
+    localStorage.setItem("ultimaPagina", window.location.href);
+    window.location.href = "login.html";
+  });
+
+});
+
+
+function preguntarAccion() {
+  const total = parseInt(document.getElementById("total").textContent);
+
+  if (total === 0) {
+    alert("El carrito está vacío. Agregá al menos un producto antes de continuar.");
+    return; 
+  }
+
+  const respuesta = confirm("¿Querés iniciar sesión?\nSi elegís 'Cancelar', te llevará al formulario de envío.");
+
+  if (respuesta) {
+    window.location.href = "login.html";
+  } else {
+    window.location.href = "formularioEnvio.html";
+  }
+}
+
