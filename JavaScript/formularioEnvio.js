@@ -1,52 +1,50 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // --- BLOQUE 1: formulario de envío ---
   const form = document.getElementById("envioForm");
+  const inciarSesionPago = localStorage.getItem("iniciarSesionPago");
 
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
+  if(inciarSesionPago){
+    const nombreInput = document.getElementById("nombre");
+    const direccionInput = document.getElementById("direccion");
+    const telefonoInput = document.getElementById("telefono");
 
-    const nombre = document.getElementById("nombre").value.trim();
-    const direccion = document.getElementById("direccion").value.trim();
-    const telefono = document.getElementById("telefono").value.trim();
-    const metodoPago = document.getElementById("metodoPago").value;
+    nombreInput.value = "Admin";
+    direccionInput.value = "Av. Mi Casa 123";
+    telefonoInput.value = "1122334455";
 
-    if (!nombre || !direccion || !telefono || !metodoPago) {
-      alert("Por favor, completá todos los campos antes de continuar.");
-      return;
-    }
+    nombreInput.readOnly = true;
+  }
+  else{
+    const nombreInput = document.getElementById("nombre");
+    const direccionInput = document.getElementById("direccion");
+    const telefonoInput = document.getElementById("telefono");
 
-    const datosEnvio = { nombre, direccion, telefono, metodoPago };
-    localStorage.setItem("datosEnvio", JSON.stringify(datosEnvio));
+    nombreInput.value = "";
+    direccionInput.value = "";
+    telefonoInput.value = "";
 
-    window.location.href = "confirmacion.html";
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const loginBtn = document.getElementById("loginBtn");
-  const userPresentacion = document.getElementById("userPresentacion");
-  const cerrarSesion = document.getElementById("cerrarSesion");
-  const menuUsuario = document.getElementById("usuarioMenu");
-
- if (localStorage.getItem("logueado") === "true") {
-    const usuario = localStorage.getItem("usuario");
-    userPresentacion.textContent = usuario.toUpperCase();
-    menuUsuario.style.display = "inline";
-    loginBtn.style.display = "none";
-  } else {
-    userPresentacion.textContent = ""
-    menuUsuario.style.display = "none";
-    loginBtn.style.display = "inline";
+    nombreInput.readOnly = false;
   }
 
-  cerrarSesion.addEventListener("click", (e) => {
-    localStorage.removeItem("logueado");
-    localStorage.removeItem("usuario");
-    window.location.href = "index.html"; 
-  });
+  if(form){
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
 
-  loginBtn.addEventListener("click", () => {
-    localStorage.setItem("ultimaPagina", window.location.href);
-    window.location.href = "login.html";
-  });
+      const nombre = document.getElementById("nombre").value.trim();
+      const direccion = document.getElementById("direccion").value.trim();
+      const telefono = document.getElementById("telefono").value.trim();
+      const metodoPago = document.getElementById("metodoPago").value;
 
+      if (!nombre || !direccion || !telefono || !metodoPago) {
+        alert("Por favor, completá todos los campos antes de continuar.");
+        return;
+      }
+
+      const datosEnvio = { nombre, direccion, telefono, metodoPago };
+      localStorage.setItem("datosEnvio", JSON.stringify(datosEnvio));
+
+      window.location.href = "confirmarPedido.html";
+    });
+  }
 });
+

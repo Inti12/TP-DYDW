@@ -1,37 +1,38 @@
 #registroForm {
   background-color: white;
-  padding: 60px 40px;
+  padding: 20px 40px;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   text-align: center;
   width: 300px;
   max-width: 100%;
-  margin-top: 50px;
+  margin-top: 5px;
+  margin-bottom: 100px;
 }
 
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
+  gap: 15px;
 }
 
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .login {
   margin-top: 20px;
-  font-size: 14px; /* más legible */
-  text-align: center; /* opcional, para centrar */
+  font-size: 14px;
+  text-align: center;
 }
 
 .login a {
-  color: #6a0dad; /* morado, opcional */
-  text-decoration: underline; /* subrayado */
-  font-weight: bold; /* un poco más visible */
+  color: #6a0dad;
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 button {
@@ -40,19 +41,28 @@ button {
   border-radius: 10px;
   border: none;
   padding: 8px 12px;
-  font-size: 0.9;
+  font-size: 0.9rem;
   width: 80%;
   transition: background-color 0.3s linear;
+  cursor: pointer;
+  margin-top: 20px;
 }
 
-button:hover{
+button:hover {
   background-color: #02532b;
 }
 
 input {
   border-radius: 10px;
   padding: 8px 12px;
-  font-size: 0.9;
+  font-size: 0.9rem;
   width: 100%;
   transition: background-color 0.3s linear;
+  border: 1px solid #ccc;
+}
+
+input:focus {
+  outline: none;
+  border-color: rgb(52, 7, 253);
+  background-color: #f0f5ff;
 }

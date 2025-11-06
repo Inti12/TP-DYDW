@@ -9,7 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <script src="../JavaScript/confirmacion.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="../JavaScript/confirmacion.js" defer></script>
 </head>
 
 <body>
@@ -18,10 +19,6 @@
   <header>
     <img src="../imagenes/Logo.png" alt="NoTiltLogo" class="logo">
     <h1 align="center" class="slogan">“No te tiltees, comete una hamburguesa. Nosotros te la llevamos”<h1>
-        <div class="usuarioMenu" id="usuarioMenu">
-          <h3 id="userPresentacion" class="userPresentacion"></h3>
-          <a href="index.html" id="cerrarSesion">Cerrar sesion</a>
-        </div>
   </header>
 
   <nav>
@@ -50,6 +47,12 @@
       <button id="confirmarPedido">Confirmar pedido</button>
       <button id="volverInicio">Volver al inicio</button>
     </div>
+
+    
+    <div id="mensajePopup">
+      Pedido confirmado 🍔<br>¡Gracias por confiar en NoTilt Burgers!
+    </div>
+
   </main>
 
   <footer>

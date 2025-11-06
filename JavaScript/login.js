@@ -16,13 +16,20 @@ function iniciarSesion() {
     localStorage.setItem("logueado", "true");
     localStorage.setItem("usuario", usuario);
     const ultimaPagina = localStorage.getItem("ultimaPagina");
-    alert(ultimaPagina)
-    if (ultimaPagina) {
+    const inciarSesionPago = localStorage.getItem("iniciarSesionPago");
+    if (inciarSesionPago)
+    {
+      window.location.href = "formularioEnvio.html";
+    }
+    else{
+      if (ultimaPagina) {
       window.location.href = ultimaPagina;
       localStorage.removeItem("ultimaPagina"); 
-    } else {
+      } else {
       window.location.href = "index.html"; 
+      }
     }
+    
   } else {
     const mensajeError = document.getElementById("mensajeError");
     if (mensajeError) {

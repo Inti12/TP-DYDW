@@ -1,87 +1,56 @@
-if (localStorage.getItem("logueado") === "true") {
-  window.location.href = "envios.html";
-}
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("registroForm").addEventListener("submit", validarRegistro);
+});
+
 
 function validarRegistro(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    let nombre = document.forms["registro"]["nombre"].value;
-    let apellido = document.forms["registro"]["apellido"].value;
-    let ocupacion = document.forms["registro"]["ocup"].value;
-    let aceptar = document.forms["registro"]["acepta"].checked;
-    let pais = document.forms["registro"]["pais"].value;
+  const form = document.getElementById("registroForm");
+  const nombre = form["nombre"].value.trim();
+  const dni = form["dni"].value.trim();
+  const email = form["email"].value.trim();
+  const direccion = form["direccion"].value.trim();
+  const telefono = form["telefono"].value.trim();
+  const password = form["password"].value.trim();
 
-    const mail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    let email = document.forms["registro"]["email"].value;
+  const mailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-    if (nombre == "") {
-        alert("El nombre no puede estar en blanco");
-        return false;
-    }
+  if (nombre === "") {
+    alert("El nombre no puede estar en blanco");
+    return;
+  }
+  if (nombre.length > 20) {
+    alert("El nombre es demasiado largo (máx. 20 caracteres)");
+    return;
+  }
 
-    if (nombre.length > 20) {
-        alert("El nombre es demasiado largo");
-        return false;
-    }
+  if (dni === "" || isNaN(dni)) {
+    alert("Debe ingresar un DNI válido (solo números)");
+    return;
+  }
 
-    if (apellido == "") {
-        alert("El apellido no puede estar en blanco");
-        return false;
-    }
+  if (!mailRegex.test(email)) {
+    alert("No es un mail válido");
+    return;
+  }
 
-    if (apellido.length > 20) {
-        alert("El apellido es demasiado largo");
-        return false;
-    }
+  if (direccion === "") {
+    alert("La dirección no puede estar vacía");
+    return;
+  }
 
-    if (!mail.test(email)) {
-        alert("No es un mail válido");
-        return false;
-    }
-    
-    if (pais == "") {
-        alert("Debe seleccionar una país");
-        return false;
-    }
-    
-    if (ocupacion == "") {
-        alert("Debe indicar una ocupacion");
-        return false;
-    }
+  if (telefono === "" || isNaN(telefono)) {
+    alert("Debe ingresar un teléfono válido (solo números)");
+    return;
+  }
 
-    if (ocupacion.length > 15) {
-        alert("El texto es demasiado largo");
-        return false;
-    }
+  if (password === "") {
+    alert("La contraseña no puede estar vacía");
+    return;
+  }
 
-    if (!aceptar)
-    {
-        alert("Debe aceptar los términos y condiciones");
-        return false;
-    }
-    alert("El fomulario fue enviado con éxito");
-    form.submit();
-   
+  alert("¡Registro completado con éxito! Bienvenido a NoTilt Burgers 🍔");
+  window.location.href = "login.html";
 }
-
-let form = document.querySelector("registroForm");
-form.addEventListener("submit", validarRegistro);
-
-function borrar()
-{
-    let nombre = document.forms["registro"]["nombre"].value;
-    let apellido = document.forms["registro"]["apellido"].value;
-    let email = document.forms["registro"]["email"].value;
-    let ocupacion = document.forms["registro"]["ocup"].value;
-    let pais = document.forms["registro"]["pais"].value;
-    let aceptar = document.forms["registro"]["acepta"].checked;
-
-      
- 
-     if(confirm("Está seguro de borrar la información?"))
-        document.forms["registro"].reset(); 
-        alert("La información se eliminó")
-    }
-
-
-document.querySelector("#Cancelar").addEventListener('click', borrar);

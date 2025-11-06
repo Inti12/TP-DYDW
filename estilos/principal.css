@@ -1,154 +1,160 @@
-    body {
-      margin: 0;
-      font-family: "Press Start 2P", cursive;
-      background-color: #f3f3f3;
-      background-image: url("../imagenes/Fondo.png");
-      background-repeat: repeat;
-      background-size: cover;
-      background-attachment: fixed;
-    }
+body {
+  margin: 0;
+  font-family: "Press Start 2P", cursive;
+  background-color: #f3f3f3;
+  background-image: url("../imagenes/Fondo.png");
+  background-repeat: repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
 
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background-color: #0E2A57;
-      padding: 0 20px;
-      height: 60px;
-    }
+/* HEADER */
+header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0E2A57;
+  padding: 0 20px;
+  height: 80px;
+}
 
-    header h1 {
-      color: #FFFFFFFF;
-    }
+header h1 {
+  color: #fff;
+}
 
-    header .slogan {
-      color: #F7E031;
-      font-size: 16px;
-      margin: 0;
-      justify-self: center;
-      padding-left: 0;
-    }
+header .slogan {
+  color: #F7E031;
+  font-size: 16px;
+  margin: 0;
+  text-align: center;
+  flex-grow: 1;
+}
+
+/* Logo */
+.logo {
+  width: 80px;
+  height: 80px;
+  margin: 0 20px;
+  object-fit: contain;
+}
+
+/* Ícono del carrito */
+.carrito {
+  width: 40px;
+  height: auto;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+/* Botón iniciar sesión (si lo hay) */
+.iniciarSesion {
+  width: 80px;
+  height: 80px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+/* Bloque del usuario (ADMIN / cerrar sesión) */
+.usuarioMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  margin-right: 20px;
+  height: 100%;           /* 🔹 Hace que el bloque ocupe toda la altura del header */
+}
+
+.userPresentacion {
+  color: #F7E031;
+  font-size: 14px;
+  margin: 0;
+  text-align: right;
+  line-height: 1;         /* 🔹 Evita que ocupe más altura vertical */
+  margin-right: 50px;
+  margin-top: 20px;
+}
+
+.usuarioMenu a {
+  padding: 2px 0;         /* 🔹 Espaciado más controlado */
+  text-decoration: none;
+  color: white;
+  font-size: 10px;
+  line-height: 1;
+}
+
+.usuarioMenu a:hover {
+  color: #F7E031;
+}
+
+.usuarioMenu a:active {
+  color: #4BB348;
+}
 
 
-    .logo {
-      justify-self: start;
-      width: 80px;
-      height: 80px;
-      margin: 0 20px;
-      transform: translateY(15px);
-    }
+/* NAV */
+nav {
+  background-color: #0E2A57;
+  padding: 10px;
+  text-align: center;
+}
 
-    .carrito {
-      width: 40px;
-      height: auto;
-      margin: 0;
-      padding: 0;
-      position: fixed;
-      right: 45px;
-      transform: translateY(15px);
-    }
+nav a {
+  color: white;
+  margin: 0 15px;
+  font-weight: bold;
+  text-decoration: none;
+}
 
-    .iniciarSesion {
-      width: 80px;
-      height: 80px;
-      justify-self: end;
-      margin: 0;
-      padding: 0;
-      transform: translateY(15px);
-      right: 45px;
-    }
+nav a:hover {
+  color: #F7E031;
+}
 
-    .userPresentacion {
-      justify-self: end;
-      margin: 0;
-      padding: 0;
-      transform: translateY(-10px);
-      right: 70px;
-      color: #F7E031;
-      font-size: 14px;
-      position: fixed;
-      top: 45px;
-    }
+nav a:active {
+  color: #4BB348;
+}
 
-    .usuarioMenu a {
-      justify-self: end;
-      padding: 10px 15px;
-      text-decoration: none;
-      color: white;
-      top: 60px;
-      position: fixed;
-      transform: translateY(-10px);
-      right: 30px;
-      font-size: 10px;
-    }
+/* FOOTER */
+footer {
+  background-color: #0E2A57;
+  color: #FFFFFF;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
 
-    .usuarioMenu a:hover {
-      color: #F7E031;
-    }
+footer .x,
+footer .instagram,
+footer .tiktok,
+footer .whatsapp {
+  width: 30px;
+  height: 30px;
+}
 
-    .usuarioMenu a:active {
-      color: #4BB348;
-    }
+footer .x {
+  width: 20px;
+  height: 20px;
+}
 
-    nav {
-      background-color: #0E2A57;
-      margin-top: 0px;
-      padding: 10px;
-      text-align: center;
-    }
+footer a {
+  color: white;
+  text-decoration: none;
+}
 
-    nav a {
-      color: white;
-      margin: 0 15px;
-      font-weight: bold;
-    }
+footer #derechos{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-family: "VT323", monospace;
+  font-size: 16px;
 
-    nav a:hover {
-      color: #F7E031;
-    }
-
-    nav a:active {
-      color: #4BB348;
-    }
-
-    footer {
-      background-color: #0E2A57;
-      color: #FFFFFF;
-      padding: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      align-items: center;
-      font-weight: bold;
-      text-align: center;
-      position: fixed;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-    }
-
-    footer .x {
-      width: 20px;
-      height: 20px;
-    }
-
-    footer .instagram {
-      width: 30px;
-      height: 30px;
-    }
-
-    footer .tiktok {
-      width: 30px;
-      height: 30px;
-    }
-
-    footer .whatsapp {
-      width: 30px;
-      height: 30px;
-    }
-
-    footer a {
-      color: white;
-      text-decoration: none;
-    }
+}

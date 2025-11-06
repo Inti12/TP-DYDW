@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   cerrarSesion.addEventListener("click", (e) => {
     localStorage.removeItem("logueado");
     localStorage.removeItem("usuario");
+    localStorage.removeItem("iniciarSesionPago");
     window.location.href = "index.html"; 
   });
 

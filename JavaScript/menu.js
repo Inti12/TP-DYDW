@@ -74,6 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
   cerrarSesion.addEventListener("click", (e) => {
     localStorage.removeItem("logueado");
     localStorage.removeItem("usuario");
+    localStorage.removeItem("iniciarSesionPago");
     window.location.href = "index.html"; 
   });
 
@@ -101,14 +102,16 @@ function preguntarPagar() {
   localStorage.setItem("pedido", JSON.stringify(carritoLista));
   localStorage.setItem("totalPedido", total);
 
-  const usuarioLogueado = localStorage.getItem("usuarioLogueado");
+  const usuarioLogueado = localStorage.getItem("logueado");
 
   if (usuarioLogueado) {
+    localStorage.setItem("iniciarSesionPago", "true");
     window.location.href = "formularioEnvio.html";
   } else {
     const respuesta = confirm("¿Querés iniciar sesión?\nSi elegís 'Cancelar', te llevará a la confirmación del pedido.");
 
     if (respuesta) {
+      localStorage.setItem("iniciarSesionPago", "true");
       window.location.href = "login.html";
     } else {
       window.location.href = "formularioEnvio.html";

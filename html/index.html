@@ -17,10 +17,9 @@
   <header>
     <img src="../imagenes/Logo.png" alt="NoTiltLogo" class="logo">
     <h1 align="center" class="slogan">“No te tiltees, comete una hamburguesa. Nosotros te la llevamos”<h1>
-        <!--<img src="../imagenes/carrito.png" alt="carrito" class="carrito" id="carrito">-->
         <div class="usuarioMenu" id="usuarioMenu">
           <h3 id="userPresentacion" class="userPresentacion"></h3>
-          <a href="index.html" id="cerrarSesion">Cerrar sesion</a>
+          <a href="#" id="cerrarSesion">Cerrar sesion</a>
         </div>
         <a href="login.html" id="loginBtn">
           <img class="iniciarSesion" src="../imagenes/IniciarSesionLogo.png" alt="Iniciar sesión">
@@ -31,8 +30,8 @@
   <nav>
     <a href="index.html">INICIO</a>
     <a href="menu.html">MENU</a>
-    <!--<a href="#" onclick="preguntarLogin()">ENVIOS</a>-->
     <a href="#finalNosotros">NOSOTROS</a>
+    <a href="#finalReseñas">RESEÑAS</a>
   </nav>
 
   <main>
@@ -74,13 +73,13 @@
       <h2 class="titulo-nosotros">👾 QUIÉNES SOMOS 👾 </h2>
       <p class="intro-nosotros">
         NoTilt somos todos los que alguna vez perdimos una ranked por lag,
-        los que jugamos en servidores imposibles, con delay y hambre,
-        pero igual seguimos dándolo todo hasta el final.
-        Los que flameamos un poquito, pero después nos reímos en el chat del grupo.
+        los que jugamos en servidores imposibles, con 200 de ping y hambre.
+        Somos los que flameamos un poquito, pero después terminamos haciendonos amigos de un random por causa del juego,
+        con el que vamos a construir una amistad increible y hasta sin conocerle siquiera la cara.
       </p>
 
       <p>
-        Nacimos en Argentina, donde el hambre y el tilt son parte de la rutina gamer.
+        Nacimos en Argentina, donde el hambre, el lag y el tilt son parte de la rutina gamer.
         Después de tantas partidas frustradas, entendimos que con hambre y enojo
         no hay motivación para seguir jugando.
         Por eso decidimos crear <strong>NoTilt Burgers</strong>:
@@ -105,7 +104,7 @@
             <div class="globo">
               <img src="../imagenes/user1.png" alt="Usuario 1" class="foto-usuario">
               <div class="info">
-                <h4>@PlayerOne</h4>
+                <h4>@MojangCreep</h4>
                 <div class="estrellas">⭐⭐⭐⭐⭐</div>
                 <p>“Me tiltée después de perder tres ranked seguidas, pero pedí una Bajonera y volví con toda. 10/10.”
                 </p>
@@ -117,9 +116,10 @@
             <div class="globo">
               <img src="../imagenes/user2.png" alt="Usuario 2" class="foto-usuario">
               <div class="info">
-                <h4>@SupportMain</h4>
+                <h4>@FakerSKT</h4>
                 <div class="estrellas">⭐⭐⭐⭐</div>
-                <p>“Pedí la Retro mientras estaba en cola. Llegó antes que la partida. Servicio épico.”</p>
+                <p>“Pedí la Retro mientras estaba buscando partida. Llegó la hamburguesa antes que la partida. Servicio
+                  épico.”</p>
               </div>
             </div>
           </div>
@@ -128,9 +128,10 @@
             <div class="globo">
               <img src="../imagenes/user3.png" alt="Usuario 3" class="foto-usuario">
               <div class="info">
-                <h4>@NoScopeGuy</h4>
+                <h4>@DarthTilt</h4>
                 <div class="estrellas">⭐⭐⭐⭐⭐</div>
-                <p>“Después de una derrota dura, me comí una Tilt y todo mejoró. +rep.”</p>
+                <p>"Me agarron ganas de comer como a las 3 de la mañana y seguian trabajando para la comunidad. estos
+                  tipos son cracks +rep”</p>
               </div>
             </div>
           </div>
@@ -139,12 +140,13 @@
         </div>
       </section>
 
-      <section class="reseña-section">
+      <section class="tuReseña">
         <h2>¿Qué te pareció NoTilt?</h2>
+        <a name="finalReseñas"></a>
         <p>Tu opinión nos ayuda a seguir mejorando nuestras hamburguesas y tu experiencia gamer 🍔🎮</p>
         <button onclick="window.location.href='reseña.html'" class="btn-reseña">Dejar reseña</button>
       </section>
-
+    </section>
   </main>
 
   <footer>
@@ -156,6 +158,7 @@
     <p><a href='https://www.tiktok.com/@notiltburger'>@NoTiltArg1</a></p>
     <img src="../imagenes/whatsapp.png" alt="Whatsapp" class="whatsapp">
     <p><a href="https://wa.me/541112345678">11-1234-5678</a></p>
+    <p id="derechos">Todos los derechos reservados ©️NoTiltBurger</p>
   </footer>
 
 </body>
