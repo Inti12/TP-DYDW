@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("envioForm");
   const inciarSesionPago = localStorage.getItem("iniciarSesionPago");
 
-  if(inciarSesionPago){
+  if (inciarSesionPago) {
     const nombreInput = document.getElementById("nombre");
     const direccionInput = document.getElementById("direccion");
     const telefonoInput = document.getElementById("telefono");
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     nombreInput.readOnly = true;
   }
-  else{
+  else {
     const nombreInput = document.getElementById("nombre");
     const direccionInput = document.getElementById("direccion");
     const telefonoInput = document.getElementById("telefono");
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     nombreInput.readOnly = false;
   }
 
-  if(form){
+  if (form) {
     form.addEventListener("submit", (event) => {
       event.preventDefault();
 
@@ -35,8 +35,26 @@ document.addEventListener("DOMContentLoaded", () => {
       const telefono = document.getElementById("telefono").value.trim();
       const metodoPago = document.getElementById("metodoPago").value;
 
-      if (!nombre || !direccion || !telefono || !metodoPago) {
-        alert("Por favor, completá todos los campos antes de continuar.");
+      if (nombre === "") {
+        alert("El nombre no puede estar en blanco");
+        return;
+      }
+      if (nombre.length > 20) {
+        alert("El nombre es demasiado largo (máx. 20 caracteres)");
+        return;
+      }
+
+      if (direccion === "") {
+        alert("La dirección no puede estar vacía");
+        return;
+      }
+
+      if (telefono === "" || isNaN(telefono)) {
+        alert("Debe ingresar un teléfono válido (solo números)");
+        return;
+      }
+      if (metodoPago === "") {
+        alert("El metodo de pago no puede estar en blanco");
         return;
       }
 
